@@ -1,17 +1,29 @@
 #include<stdio.h>
 int main()
 {
-int x,y,z;
-char w;
-printf("Please Enter the respective term\n
-        press A for addition\n
-        press S for substraction\n
-        press M for multiplication\n
-        press D for division\n");
-scanf("%c,&w");
-printf("please enter the number for it");
-scanf("%d%d",&x,&y);
+int a,b,c;
+char choice;
+do{printf("\n Enter two numbers:");
+scanf("%d%d",&a,&b);
+ printf("Enter your choice\nPlease enter 1 to Add the numbers\nPlease enter 2 to subtract the numbers\nPlease enter 3 to multiply the numbers\nPlease enter 4 to divide the numbers\n");
+scanf("%d",&c);
+switch(c)
 {
-   case 'A':
-       z = x + y;
-       break;
+case 1: printf("Sum: %d",a+b);
+ 		break;
+case 2: printf("Subtract :%d",a-b);
+		break;
+case 3: printf("Multiply :%d",a*b);
+ 		break;
+case 4: if(b==0)
+		printf("\n Denominator cannot be zero");
+        else
+		printf("Divide :%d",a/b); 
+		break;
+default:printf("Wrong choice");
+}
+printf("\n Do you want to continue? (Press y/n)");
+scanf(" %c",&choice);
+}while(choice=='y');
+}
+
