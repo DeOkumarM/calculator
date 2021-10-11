@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+int x,y,z;
+char w;
+printf("Please Enter the respective term\n
+        press A for addition\n
+        press S for substraction\n
+        press M for multiplication\n
+        press D for division\n");
+scanf("%c,&w");
+printf("please enter the number for it");
+scanf("%d%d",&x,&y);
+{
+   case 'A':
+       z = x + y;
+       break;
